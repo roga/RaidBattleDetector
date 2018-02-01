@@ -53,21 +53,20 @@ while(true) {
             def message = "[" + currentDateTime() + "] " + gym.name
 
             if(data.raids.toString().contains(gym.id)) {
-
                 notify("Raid Battle", "Detected." + gym.name)
-
-                println("$message - Found!")
                 File file = new File("./run.log")
                 file.append "Raid Battle Detected: " + message + "\n"
+                println("$message - Found!")
             } else {
                 println("$message - Not Found.")
-                if(isNotify()) {
-                    notify("Raid Battle", "Still running in background...")
-                }
             }
 
             sleep(1000 * 3 ) // sleep for 3 secs
 
+        }
+
+        if(isNotify()) {
+            notify("Raid Battle", "Still running in background.")
         }
 
         refreshHashCode()
