@@ -122,16 +122,14 @@ def isNotify() {
     Calendar.getInstance().get(Calendar.MINUTE) % 10 == 0
 }
 
-/**
- * put the script to /usr/local/bin/notify.sh and chmod +x
- *
- *      #!/bin/sh
- *      /usr/bin/osascript -e "display notification \"$2\" with title \"$1\""
- *
- */
-
 def notify(def title, def body) {
-    def command = ['/usr/local/bin/notify.sh', title, body]
-    def proc = command.execute()
-    proc.waitFor()
+
+    def path = "/usr/local/bin/notify.sh"
+    def file = new File(path)
+
+    if(file.exists()) {
+        def command = ['/usr/local/bin/notify.sh', title, body]
+        def proc = command.execute()
+        proc.waitFor()
+    }
 }
