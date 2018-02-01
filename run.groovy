@@ -65,11 +65,8 @@ while(true) {
 
         }
 
-        if(isNotify()) {
-            notify("Raid Battle", "Still running in background.")
-        }
-
         refreshHashCode()
+
         sleep(1000 * 60 ) // sleep for 1 min
 
     }
@@ -117,9 +114,11 @@ def ceaseFire() {
     peaceHours.contains(hour);
 }
 
-def isNotify() {
-    Calendar.getInstance().get(Calendar.MINUTE) % 10 == 0
-}
+//def reminder() {
+//    if(Calendar.getInstance().get(Calendar.MINUTE) % 10 == 0) {
+//        notify("Raid Battle", "Still running in background.")
+//    }
+//}
 
 def notify(def title, def body) {
 
