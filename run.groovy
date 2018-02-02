@@ -105,7 +105,7 @@ def poke(def method, def path, def parameter) {
 
 def currentDateTime() {
     def now = new Date()
-    now.format("yyyy/MM/dd HH:mm:ss", TimeZone.getTimeZone('CST')).toString()
+    now.format("yyyy/MM/dd HH:mm:ss", TimeZone.getTimeZone('GMT+8:00')).toString()
 }
 
 def ceaseFire() {
