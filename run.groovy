@@ -144,7 +144,7 @@ def notify(def title, def body) {
     def file = new File(path)
 
     if(file.exists()) {
-        def command = ['/usr/local/bin/notify.sh', title, body]
+        def command = [path, title, body]
         def proc = command.execute()
         proc.waitFor()
     }
