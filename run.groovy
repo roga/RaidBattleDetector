@@ -31,6 +31,24 @@ gymList = [
                 name : '七星涼亭',
                 latitude : '25.136098',
                 longitude : '121.501942'
+        ],
+        gym6 : [
+                id : 'ca3a4709199540b19333b4d502741de2.16',
+                name : '燈光噴水地板',
+                latitude : '25.058067',
+                longitude : '121.615534'
+        ],
+        gym7 : [
+                id : 'a01ef38f2a824dee801a174e1a3177ef.16',
+                name : '三貿公園',
+                latitude : '25.057866',
+                longitude : '121.614258'
+        ],
+        gym8 : [
+                id : '7d19a592983b425a9773e8ce08c59375.11',
+                name : '天人境界',
+                latitude : '25.057556',
+                longitude : '121.617152'
         ]
 ]
 
